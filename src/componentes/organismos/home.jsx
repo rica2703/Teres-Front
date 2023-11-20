@@ -15,14 +15,15 @@ function Home(){
 
             </div>
             <div className='contenedorBotonC'>
-                <Boton className="botonComprar" onClick={() => setConCuenta(true)} textoBoton={textos.textoHeader.comprar} />
+                {/* <Boton className="botonComprar" onClick={() => setConCuenta(true)} textoBoton={textos.textoHeader.comprar} /> */}
             </div>
                 {conCuenta && (
                     <div>
                         <Alerta textoLink={textos.botonIniciarHeader} to={"/login"} onClick={() => setConCuenta(false)} textoP={textos.mensajeIniciarHeader}/>
                     </div>
                 )}
-        <Carrucel/>
+                <br />
+        <Carrucel onClick={()=>setConCuenta(true)}/>
         </>
     );
 }

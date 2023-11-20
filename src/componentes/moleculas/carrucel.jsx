@@ -3,7 +3,7 @@ import ContenedorProducto from './ContenedorProducto';
 import { useEffect } from 'react';
 
 const ApiProductos=`http://localhost:8080/api/productos/`;
-function Carrusel() {
+function Carrusel(props) {
 
 const[productoApi,setPorductoApi]=useState();
 const [arreglo,setArreglo]=useState([]);
@@ -38,7 +38,7 @@ useEffect(()=>{
       {arreglo[0]?
       <div className="carousel-container">
         {arreglo.slice(currentIndex, currentIndex + itemsToShow).map((producto, index) => (
-          <ContenedorProducto key={index} src={producto.urlImagen} textoNombre={producto.nombreP} textoPrecio={producto.precioUnitario} />
+          <ContenedorProducto key={index} src={producto.urlImagen} textoNombre={producto.nombreP} textoPrecio={"$"+producto.precioUnitario} onClick={props.onClick} />
         ))}
       </div>:<p>not found</p>
 }

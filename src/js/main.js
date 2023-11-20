@@ -24,13 +24,15 @@ const textos = {
     metodosPago: "Metodos de pago",
     transferencia: "Transferencia bancaria",
     conceptoPago: "Concepto de pago: ",
+    errorInput:"no ingrese numeros negativos u otros caracteres",
     textoHeader: {
         titulo: "Detalles Tere",
         opc1: "Comprar",
         opc2: "productos",
         opc3: "Ventas",
         opc4: "Contacto",
-        comprar: "Comprar ahora ➞"
+        comprar: "Comprar ahora",
+       
     },
     textoBotones: {
         botonPrev: "Anterior",
@@ -50,6 +52,9 @@ const textos = {
         verProductos: "Ver productos",
         verPedidos: "Ver pedidos",
         reporteVentas: "Ver reporte de ventas",
+        comprarProducto:"Comprar",
+        pagar:"Pagar",
+        continuar:"Continuar",
     },
     tabla: {
         col1: "Concepto de pago",
