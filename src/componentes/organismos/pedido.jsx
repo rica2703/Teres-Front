@@ -11,7 +11,7 @@ import { useNavigate } from "react-router-dom";
 const ApiProductos = `http://localhost:8080/api/productos/`;
 function Pedido() {
     const navigate=useNavigate();
-    const { user, setUser } = useContext(userContext);
+    const { user,setUser } = useContext(userContext);
     const idProducto = user.pedido;
     const [numeroValidado, setNumeroValidado] = useState(false);
     const [color, setColor] = useState("Por defecto");
@@ -77,15 +77,24 @@ function Pedido() {
         }
         else {
             setUser({
+                usuarioContexto:user.usuarioContexto,
                 pedido: user.pedido,
                 color: color,
-                piezas: cantidadRosas
+                piezas: cantidadRosas,
+                nombrePedido:productos.nombreP,
+                urlContexto:productos.urlImagen,
+                precio:productos.precioUnitario,
             });
+            // alert("usuario pagina pedido: "+user.usuarioContexto);
             // alert("compra exitosa"+user.pedido+" "+user.color+" "+user.piezas);
             navigate("/detallePedido");
         }
     }
-
+    useEffect(()=>{
+        if(user.usuarioContexto===""){
+        navigate("/login");
+        }
+            });
     return (<>
         <Header />
         <div className="contenedorPedido">

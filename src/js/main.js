@@ -25,6 +25,15 @@ const textos = {
     transferencia: "Transferencia bancaria",
     conceptoPago: "Concepto de pago: ",
     errorInput:"no ingrese numeros negativos u otros caracteres",
+    cantidadPagar:"Por la cantidad de $",
+    cuneta:"Cuenta STP:-",
+    noCuneta:"6461-0014-6403-9823-25",
+    mensajePagoRealizado:" Pago realizado, Espere a que el pago sea verificado por nuestro administrador",
+    errorCompra:"Error al realizar el pago, intente comprar de nuevo",
+    pedidosTitulo:"Pedidos en preparación",
+    proceso1:"Pago en proceso de verificacion",
+    proceso2:"Preparando",
+    proceso3:"Fecha de entrega:",
     textoHeader: {
         titulo: "Detalles Tere",
         opc1: "Comprar",
@@ -35,6 +44,10 @@ const textos = {
        
     },
     textoBotones: {
+        asignarDiaEntrega:"Asignar día de entrega",
+        AgregarProducto:"Agregar Producto",
+        realizoTransferencia:"Realize la transferencia",
+        eliminar:"Eliminar",
         botonPrev: "Anterior",
         botonNext: "Siguiente",
         editar: "Editar",
@@ -66,6 +79,9 @@ const textos = {
         col7:"Costo de envio",
         col8:"Costo del producto",
         col9:"Total",
+        col10:"Imagen",
+        col11:"Datos de envio",
+        col12:"Estado",
     }
 }
 

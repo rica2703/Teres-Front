@@ -7,10 +7,13 @@ import Pedido from './componentes/organismos/pedido';
 import DetallePedido from './componentes/organismos/detallePedido';
 import Pago from './componentes/organismos/pago';
 import MenuAdmin from './componentes/organismos/menuAdmin';
-import VerPedidos from './componentes/organismos/verPedidos';
 import Reporte from './componentes/organismos/reporteVentas';
 import Comprar from './componentes/organismos/comprarProductos';
+import VerProductos from './componentes/organismos/verProductos';
+import AprobarPedidos from './componentes/organismos/AprobarPedidos';
+import Seguimiento from './componentes/moleculas/seguimiento';
 import userContext from './context/userContext';
+import Error from './componentes/moleculas/error';
 import {
   createBrowserRouter,
   RouterProvider,
@@ -21,8 +24,12 @@ const router = createBrowserRouter([
     element: <Reporte />,
   },
   {
+    path:"/seguimiento",
+    element:<Seguimiento/>,
+  },
+  {
     path: "/ver-pedidos",
-    element: <VerPedidos />,
+    element: <AprobarPedidos/>,
   },
   {
     path: "/menu-administrador",
@@ -56,6 +63,14 @@ const router = createBrowserRouter([
     path: "/comprar",
     element: <Comprar />,
   },
+  {
+    path:"/ver-productos",
+    element:<VerProductos/>,
+  },
+  {
+    path:"*",
+    element:<Error/>
+  },
 ]);
 
 function App() {
@@ -65,6 +80,12 @@ function App() {
     pedido:"",
     color:"",
     piezas:"",
+    nombrePedido:"",
+    urlContexto:"",
+    precio:"",
+    lugar:"",
+    fecha:"",
+    envio:"",
   });
   return (<>
     <userContext.Provider value={{ user, setUser }}>

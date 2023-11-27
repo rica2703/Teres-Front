@@ -10,10 +10,10 @@ function Home(){
 
     return(
         <>
-        <Header/>
         <div className="portada">
 
             </div>
+        <Header/>
             <div className='contenedorBotonC'>
                 {/* <Boton className="botonComprar" onClick={() => setConCuenta(true)} textoBoton={textos.textoHeader.comprar} /> */}
             </div>

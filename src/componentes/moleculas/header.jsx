@@ -4,19 +4,20 @@ import Boton from '../atomos/boton';
 import css from '../../style/main.css';
 import Input from '../atomos/input';
 import Alerta from './alerta';
-
+import Logo from '../../assets/img/logo.png';
 function Header() {
 
     return (
         <>
-            <div className='headerRosa'>
-                <Boton className="botonHeader" textoBoton={textos.textoHeader.titulo} />
-                <Boton className="botonHeader" textoBoton={textos.textoHeader.opc1} />
-                <Boton className="botonHeader" textoBoton={textos.textoHeader.opc2} />
-                <Boton className="botonHeader" textoBoton={textos.textoHeader.opc3} />
-                <Boton className="botonHeader" textoBoton={textos.textoHeader.opc4} />
-                <Input type="text" placeholder="Buscar producto" className="inputHeader" />
-            </div>
+        <div className='headerArriba'>
+
+             <div className="headerRosa">
+            <label  className="" >{textos.textoHeader.titulo}</label>
+        </div>
+        <div className="centradoLogo">
+        <img src={Logo} alt="not-found" className="logoHeaderPink" />
+        </div>
+        </div>
             
         </>
     );

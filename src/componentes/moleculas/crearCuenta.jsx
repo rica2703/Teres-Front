@@ -137,14 +137,14 @@ const validarContraseña=(e)=>{
                 if (respuesta.ok) {
                     // La solicitud se completó con éxito
                     // alert('Usuario creado con éxito');
-                    navigate("/perfil");
+                    navigate("/comprar");
                   } else {
                     // La solicitud no se completó con éxito
                     alert('Error al crear el usuario');
                   }
             }
         } catch (error) {
-            
+            alert("El usuario ya existe intente con otro");
         }
     }
 
